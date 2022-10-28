@@ -1,0 +1,139 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/**
+
+there are a lot of people who need to use bigger fornts-size to reed, so it is necessary to us a relative/flexible unit of measure.
+px = pixels, is a fixed unit of measure, so it cannot be changed
+
+REM = Root EM i aflexible unit of measure
+1rem = 16px
+
+**/
+
+:root {
+  font-size: 62.5%;/* equals to 10px */
+}
+
+body {
+  background: #ECE9FD;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 1.6rem;
+  padding: 6rem 2.3rem 6.5rem;
+}
+
+main {
+  min-width: 33rem;
+  margin: 0 auto;
+}
+
+body main p:first-child {
+  text-transform: uppercase;
+  color: #7158EF;
+  line-height: 3.2rem;
+  font-weight: 400;
+  margin-bottom: 1.7rem;
+  letter-spacing: 3px;
+  
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 4.0rem;
+  line-height: 4.8rem;
+  margin-bottom: 1.5rem;
+  color: #090039;
+  
+}
+
+h1 + p {
+  color: rgba(10, 0, 57, 0.64);
+  font-weight: 400;
+  line-height: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+a {
+  color: #090039;
+ 
+  line-height: 3.2rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7158EF;
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+  margin-top: 7.2rem;
+  
+}
+ul li {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  
+  color: #090039;
+
+  max-width: 25.7rem;
+
+  display: flex;
+  align-items: flex-start;
+  
+  gap: 3.8rem;
+}
+
+ul li + li{
+  /* ul li +li =means take all the li that has another li before*/ 
+
+  margin-top: 3.2rem;
+}
+
+ul li span {
+  font-weight: 800;
+  font-size: 7.2rem;
+  line-height: 8.0rem;
+  letter-spacing: 2px;
+  
+  color: #090039;
+  
+}
+/*
+media queries
+
+when you want to make a difernt desing in html page, it's necessary to change some css elements
+so @media(max-width: 500px) = means that when the width page is 500px or more, new css elements will be applied
+*//* 
+em it isa flexible unit of measure
+*/
+@media (min-width: 700px) {
+  body {
+    padding: 8rem;
+  }
+  
+  main {
+    max-width: 1020px;
+    display: flex;
+    gap: 10rem;
+  }
+
+  main > div {
+    /* main > div = menas the first level of div*/ 
+    max-width: 484px;
+  }
+
+
+  ul li {
+    gap: 5.3rem;
+    max-width: 450px;
+    align-items: center;
+
+  }
+
+}
